@@ -70,14 +70,14 @@ class ReadFileSFTPPiece(BasePiece):
             password=input_data.password,
             port=input_data.port
         )
-        """
         sftp.connect()
+        """
         csv_doc = sftp.readFileContent(remote_path=input_data.route, filename=input_data.file)
-        sftp.disconnect()
         csv_doc = csv_doc.astype(str)
 
         self.logger.info(f" INFO DOC = {csv_doc}")
         """
+        sftp.disconnect()
 
         # Return success message
         return OutputModel(message="OK")
