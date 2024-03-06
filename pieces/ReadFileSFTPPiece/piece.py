@@ -1,8 +1,5 @@
 from domino.base_piece import BasePiece
 from .models import InputModel, OutputModel
-import numpy as np
-import plotly.graph_objects as go
-from pathlib import Path
 import pysftp as sftp
 import pandas as pd
 from io import StringIO
@@ -66,7 +63,7 @@ class ReadFileSFTPPiece(BasePiece):
     def piece_function(self, input_data: InputModel):
 
         self.logger.info("Start Read File in SFTP.")
-
+        """
         sftp = Sftp(
             hostname=input_data.host,
             username=input_data.user,
@@ -80,6 +77,7 @@ class ReadFileSFTPPiece(BasePiece):
         csv_doc = csv_doc.astype(str)
 
         self.logger.info(f" INFO DOC = {csv_doc}")
+        """
 
         # Return success message
         return OutputModel(message="OK")
