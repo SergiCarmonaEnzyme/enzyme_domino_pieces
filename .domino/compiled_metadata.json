@@ -140,7 +140,7 @@
     "ReadFileSFTPPiece": {
         "name": "ReadFileSFTPPiece",
         "dependency": {
-            "dockerfile": null,
+            "dockerfile": "Dockerfile",
             "requirements_file": "requirements.txt"
         },
         "tags": [
