@@ -8,7 +8,7 @@
             "ExampleSleepPiece"
         ],
         "secrets": [],
-        "source_image": "ghcr.io/enzyme/enzyme_domino_pieces:0.0.8-group0"
+        "source_image": "ghcr.io/enzyme/enzyme_domino_pieces:0.0.11-group0"
     },
     "group1": {
         "dependency": {
@@ -19,7 +19,7 @@
             "ExampleSineWavePiece"
         ],
         "secrets": [],
-        "source_image": "ghcr.io/enzyme/enzyme_domino_pieces:0.0.8-group1"
+        "source_image": "ghcr.io/enzyme/enzyme_domino_pieces:0.0.11-group1"
     },
     "group2": {
         "dependency": {
@@ -30,6 +30,6 @@
             "ReadFileSFTPPiece"
         ],
         "secrets": [],
-        "source_image": "ghcr.io/enzyme/enzyme_domino_pieces:0.0.8-group2"
+        "source_image": "ghcr.io/enzyme/enzyme_domino_pieces:0.0.11-group2"
     }
 }
