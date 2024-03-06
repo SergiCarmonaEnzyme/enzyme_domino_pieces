@@ -63,14 +63,14 @@ class ReadFileSFTPPiece(BasePiece):
     def piece_function(self, input_data: InputModel):
 
         self.logger.info("Start Read File in SFTP.")
-        """
+        
         sftp = Sftp(
             hostname=input_data.host,
             username=input_data.user,
             password=input_data.password,
             port=input_data.port
         )
-
+        """
         sftp.connect()
         csv_doc = sftp.readFileContent(remote_path=input_data.route, filename=input_data.file)
         sftp.disconnect()
