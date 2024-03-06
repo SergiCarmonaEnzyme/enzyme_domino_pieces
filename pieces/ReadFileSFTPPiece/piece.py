@@ -82,4 +82,4 @@ class ReadFileSFTPPiece(BasePiece):
         self.logger.info(f" INFO DOC = {csv_doc}")
 
         # Return success message
-        return OutputModel(message=csv_doc)
+        return OutputModel(message="OK")
