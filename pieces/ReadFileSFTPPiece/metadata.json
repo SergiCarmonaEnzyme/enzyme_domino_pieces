@@ -2,7 +2,8 @@
   "name": "ReadFileSFTPPiece",
   "description": "This is an example of a piece that uses Dockerfile for dependencies.",
   "dependency": {
-    "dockerfile": "Dockerfile_1"
+    "dockerfile": "Dockerfile",
+    "requirements_file": "requirements.txt"
   },
   "container_resources": {
     "requests": {
