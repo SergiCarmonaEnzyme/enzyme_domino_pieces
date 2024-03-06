@@ -147,7 +147,7 @@
             "Example"
         ],
         "style": {
-            "node_label": "Example Sine Piece",
+            "node_label": "Read File From SFTP",
             "node_type": "default",
             "node_style": {
                 "backgroundColor": "#ebebeb"
