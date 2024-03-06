@@ -5,31 +5,9 @@
             "requirements_file": "requirements.txt"
         },
         "pieces": [
-            "ExampleSleepPiece"
-        ],
-        "secrets": [],
-        "source_image": "ghcr.io/enzyme/enzyme_domino_pieces:0.0.12-group0"
-    },
-    "group1": {
-        "dependency": {
-            "dockerfile": "Dockerfile",
-            "requirements_file": null
-        },
-        "pieces": [
-            "ExampleSineWavePiece"
-        ],
-        "secrets": [],
-        "source_image": "ghcr.io/enzyme/enzyme_domino_pieces:0.0.12-group1"
-    },
-    "group2": {
-        "dependency": {
-            "dockerfile": "Dockerfile",
-            "requirements_file": "requirements.txt"
-        },
-        "pieces": [
             "ReadFileSFTPPiece"
         ],
         "secrets": [],
-        "source_image": "ghcr.io/enzyme/enzyme_domino_pieces:0.0.12-group2"
+        "source_image": "ghcr.io/enzyme/enzyme_domino_pieces:0.0.13-group0"
     }
 }
