@@ -17,7 +17,7 @@
   },
   "tags": ["Example"],
   "style": {
-    "node_label": "Example Sine Piece",
+    "node_label": "Read File From SFTP",
     "icon_class_name": "fa-solid:database"
   }
 }
