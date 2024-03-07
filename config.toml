@@ -1,11 +1,7 @@
 [repository]
-REGISTRY_NAME = "tauffer-consulting"
-#REGISTRY_NAME = "sergicarmonaenzyme"
+REGISTRY_NAME = "sergicarmonaenzyme"
 
-REPOSITORY_NAME = "default_domino_pieces"
-#REPOSITORY_NAME = "enzyme_domino_pieces-ghcr"
-REPOSITORY_LABEL = "Default Pieces Repository"
-#REPOSITORY_LABEL = "Enzyme Domino Pieces"
+REPOSITORY_NAME = "enzyme_domino_pieces-ghcr"
+REPOSITORY_LABEL = "Enzyme Domino Pieces"
 
-VERSION = "0.8.1"
-#VERSION = "0.1.1"
+VERSION = "0.1.3"
