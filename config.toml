@@ -1,12 +1,11 @@
 [repository]
-# The name of the github organization / person owner, e.g. tauffer-consulting.
-# Must be in lower-case letters
-REGISTRY_NAME = "sergicarmonaenzyme"
+REGISTRY_NAME = "tauffer-consulting"
+#REGISTRY_NAME = "sergicarmonaenzyme"
 
-# The name of this Pieces repository
-REPOSITORY_NAME = "enzyme_domino_pieces-ghcr"
-REPOSITORY_LABEL = "Enzyme Domino Pieces"
+REPOSITORY_NAME = "default_domino_pieces"
+#REPOSITORY_NAME = "enzyme_domino_pieces-ghcr"
+REPOSITORY_LABEL = "Default Pieces Repository"
+#REPOSITORY_LABEL = "Enzyme Domino Pieces"
 
-# The version of this Pieces release
-# Attention: changing this will create a new release
-VERSION = "0.1.1"
+VERSION = "0.8.1"
+#VERSION = "0.1.1"
