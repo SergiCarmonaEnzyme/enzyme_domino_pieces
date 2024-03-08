@@ -45,9 +45,9 @@ class ConvertCSVToIDOCPiece(BasePiece):
 
         self.logger.info("Start convert file content into IDOC.")
 
-        idoc_content = _convertDFToIDoc(input_data.file_content)
+        idoc_content_string = _convertDFToIDoc(input_data.file_content)
 
         self.logger.info("Finish convert file content into IDOC.")
         
         # Return success message
-        return OutputModel(idoc_content=idoc_content)
+        return OutputModel(idoc_content=idoc_content_string)
