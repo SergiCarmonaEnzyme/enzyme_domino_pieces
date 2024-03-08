@@ -1,8 +1,7 @@
 from domino.base_piece import BasePiece
 from .models import InputModel, OutputModel
-import pandas as pd
 from io import StringIO
-import xml.etree.ElementTree as ET
+import pysftp as sftp
 
 class Sftp:
     def __init__(self, hostname, username, password, port=22):

@@ -37,7 +37,7 @@ def _convertDFToIDoc(file_content):
 
     print(f"IDOC = {idoc_doc}")
     
-    return str(idoc_doc)
+    return idoc_doc
 
 class ConvertCSVToIDOCPiece(BasePiece):
 
