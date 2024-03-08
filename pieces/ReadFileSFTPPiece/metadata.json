@@ -1,6 +1,6 @@
 {
   "name": "ReadFileSFTPPiece",
-  "description": "This is an example of a piece that uses Dockerfile for dependencies.",
+  "description": "Read file content in sftp.",
   "dependency": {
     "requirements_file": "requirements.txt"
   },
@@ -14,7 +14,7 @@
       "memory": 512
     }
   },
-  "tags": ["Example"],
+  "tags": ["SFTP", "CSV"],
   "style": {
     "node_label": "Read File From SFTP",
     "icon_class_name": "fa-solid:database"

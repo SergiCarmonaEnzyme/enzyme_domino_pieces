@@ -1,8 +1,8 @@
 from domino.base_piece import BasePiece
 from .models import InputModel, OutputModel
-import pysftp as sftp
 import pandas as pd
 from io import StringIO
+import xml.etree.ElementTree as ET
 
 class Sftp:
     def __init__(self, hostname, username, password, port=22):
@@ -36,27 +36,21 @@ class Sftp:
         self.connection.close()
         print(f"Disconnected from host {self.hostname}")
 
-    def readFileContent(self, remote_path, filename):
+    def saveFileContent(self, remote_path, filename, data):
         try:
-
             path_file = remote_path + "/" + filename
 
-            print(
-                f"read file from {self.hostname} as {self.username} [(remote path : {path_file});]"
-            )
+            file = StringIO(data)
+            file.seek(0)
+            self.connection.putfo(file, path_file)
 
-            sftp_doc = self.connection.open(path_file)
-
-            contentDoc = sftp_doc.read()
-
-            print("read file completed")
-
-            return contentDoc.decode("utf-8-sig", errors='ignore')
+            print("upload file completed")
 
         except Exception as err:
             raise Exception(err)
 
-class ReadFileSFTPPiece(BasePiece):
+
+class UploadFileIDOCToSFTPPiece(BasePiece):
 
     def piece_function(self, input_data: InputModel):
 
@@ -70,11 +64,6 @@ class ReadFileSFTPPiece(BasePiece):
         )
         sftp.connect()
         
-        csv_doc = sftp.readFileContent(remote_path=input_data.route, filename=input_data.file)
-
-        self.logger.info(f" INFO DOC = {csv_doc}")
+        sftp.saveFileContent(remote_path=input_data.route, filename=input_data.file, data=input_data.idoc_content)
         
         sftp.disconnect()
-
-        # Return success message
-        return OutputModel(file_content=csv_doc)

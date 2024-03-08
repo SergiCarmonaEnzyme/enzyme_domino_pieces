@@ -21,8 +21,6 @@ class InputModel(BaseModel):
     file: str = Field(
         description="File"
     )
-
-class OutputModel(BaseModel):
-    file_content: str = Field(
-        description="Content File"
+    idoc_content: str = Field(
+        description="File content in IDOC"
     )

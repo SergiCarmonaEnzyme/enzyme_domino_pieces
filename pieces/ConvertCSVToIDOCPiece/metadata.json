@@ -1,8 +1,8 @@
 {
-  "name": "ExampleSineWavePiece",
-  "description": "This is an example of a piece that uses Dockerfile for dependencies.",
+  "name": "ConvertCSVToIDOCPiece",
+  "description": "Convert content of csv file to IDOC.",
   "dependency": {
-    "dockerfile": "Dockerfile"
+    "requirements_file": "requirements.txt"
   },
   "container_resources": {
     "requests": {
@@ -14,9 +14,9 @@
       "memory": 512
     }
   },
-  "tags": ["Example"],
+  "tags": ["IDOC", "CSV"],
   "style": {
-    "node_label": "Example Sine Piece",
+    "node_label": "Convert CSV To IDOC",
     "icon_class_name": "fa-solid:database"
   }
 }

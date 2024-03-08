@@ -1,6 +1,6 @@
 {
-  "name": "ExampleSleepPiece",
-  "description": "This is an example of a simple Domino Piece that sleep for N seconds",
+  "name": "UploadFileIDOCToSFTPPiece",
+  "description": "Upload content IDOC to SFTP Server.",
   "dependency": {
     "requirements_file": "requirements.txt"
   },
@@ -14,9 +14,9 @@
       "memory": 512
     }
   },
-  "tags": ["Example"],
+  "tags": ["IDOC", "SFTP"],
   "style": {
-    "node_label": "Example Sleep Piece",
+    "node_label": "Upload IDOC to SFTP",
     "icon_class_name": "fa-solid:database"
   }
 }
