@@ -4,6 +4,7 @@ import pandas as pd
 from io import StringIO
 import xml.etree.ElementTree as ET
 
+
 def _convertDFToIDoc(file_content):
 
     df_doc = pd.read_csv(StringIO(file_content), sep=";")
@@ -36,7 +37,7 @@ def _convertDFToIDoc(file_content):
 
     print(f"IDOC = {idoc_doc}")
 
-class ReadFileSFTPPiece(BasePiece):
+class ConvertCSVToIDOCPiece(BasePiece):
 
     def piece_function(self, input_data: InputModel):
 
