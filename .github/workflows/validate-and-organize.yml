@@ -32,7 +32,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: "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"
+          password: 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
 
       - name: pip list
         run: pip list | grep domino
@@ -56,7 +56,7 @@ jobs:
       - name: Publish images
         env:
           GHCR_USERNAME: ${{ github.actor }}
-        run: domino piece publish-images --registry-token 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
+        run: domino piece publish-images --registry-token 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
 
       - name: Commit files
         run: |
@@ -68,11 +68,11 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: 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
+          github_token: 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
           branch: ${{ github.ref }}
 
       - name: Create Release
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: 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
         run: domino piece release
