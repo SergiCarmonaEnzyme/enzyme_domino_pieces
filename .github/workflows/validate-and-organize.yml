@@ -32,7 +32,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: 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
+          password: "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"
 
       - name: pip list
         run: pip list | grep domino
