@@ -66,3 +66,7 @@ class UploadFileIDOCToSFTPPiece(BasePiece):
         sftp.saveFileContent(remote_path=input_data.route, filename=input_data.file, data=input_data.idoc_content)
         
         sftp.disconnect()
+
+        # Return success message
+        return OutputModel(message="OK")
+
