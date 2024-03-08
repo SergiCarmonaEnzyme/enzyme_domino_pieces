@@ -36,6 +36,8 @@ def _convertDFToIDoc(file_content):
     idoc_doc = ET.tostring(idoc, encoding='utf-8').decode('utf-8')
 
     print(f"IDOC = {idoc_doc}")
+    
+    return idoc_doc
 
 class ConvertCSVToIDOCPiece(BasePiece):
 
