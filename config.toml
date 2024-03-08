@@ -4,4 +4,4 @@ REGISTRY_NAME = "sergicarmonaenzyme"
 REPOSITORY_NAME = "enzyme_domino_pieces-ghcr"
 REPOSITORY_LABEL = "Enzyme Domino Pieces"
 
-VERSION = "0.1.7"
+VERSION = "0.1.8"
