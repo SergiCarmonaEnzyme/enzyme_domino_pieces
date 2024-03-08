@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'config.toml'
+      - "config.toml"
 
 jobs:
   validate-and-organize:
@@ -32,7 +32,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: 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
 
       - name: pip list
         run: pip list | grep domino
@@ -47,16 +47,16 @@ jobs:
       - name: Run tests over built images
         run: |
           pytest --cov=pieces --cov-report=xml --cov-report=term-missing
-      
+
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-      
+
       - name: Publish images
         env:
           GHCR_USERNAME: ${{ github.actor }}
-        run: domino piece publish-images --registry-token ${{ secrets.GITHUB_TOKEN }}
+        run: domino piece publish-images --registry-token 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
 
       - name: Commit files
         run: |
@@ -68,11 +68,11 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: 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
           branch: ${{ github.ref }}
 
       - name: Create Release
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: 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
         run: domino piece release
