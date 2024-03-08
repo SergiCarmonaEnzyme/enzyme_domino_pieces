@@ -179,7 +179,7 @@
                 "port": {
                     "description": "Port",
                     "title": "Port",
-                    "type": "string"
+                    "type": "integer"
                 },
                 "user": {
                     "description": "User",

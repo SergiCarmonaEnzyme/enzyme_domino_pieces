@@ -9,7 +9,7 @@
             "ReadFileSFTPPiece"
         ],
         "secrets": [],
-        "source_image": "ghcr.io/sergicarmonaenzyme/enzyme_domino_pieces-ghcr:0.1.13-group0"
+        "source_image": "ghcr.io/sergicarmonaenzyme/enzyme_domino_pieces-ghcr:1.0-group0"
     },
     "group1": {
         "dependency": {
@@ -20,6 +20,6 @@
             "ExampleSineWavePiece"
         ],
         "secrets": [],
-        "source_image": "ghcr.io/sergicarmonaenzyme/enzyme_domino_pieces-ghcr:0.1.13-group1"
+        "source_image": "ghcr.io/sergicarmonaenzyme/enzyme_domino_pieces-ghcr:1.0-group1"
     }
 }
