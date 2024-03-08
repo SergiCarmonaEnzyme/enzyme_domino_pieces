@@ -1,15 +1,16 @@
 {
-    "ExampleSleepPiece": {
-        "name": "ExampleSleepPiece",
+    "UploadFileIDOCToSFTPPiece": {
+        "name": "UploadFileIDOCToSFTPPiece",
         "dependency": {
             "dockerfile": null,
             "requirements_file": "requirements.txt"
         },
         "tags": [
-            "Example"
+            "IDOC",
+            "SFTP"
         ],
         "style": {
-            "node_label": "Example Sleep Piece",
+            "node_label": "Upload IDOC to SFTP",
             "node_type": "default",
             "node_style": {
                 "backgroundColor": "#ebebeb"
@@ -20,7 +21,7 @@
                 "cursor": "pointer"
             }
         },
-        "description": "This is an example of a simple Domino Piece that sleep for N seconds",
+        "description": "Upload content IDOC to SFTP Server.",
         "container_resources": {
             "requests": {
                 "cpu": 100,
@@ -32,23 +33,59 @@
             }
         },
         "input_schema": {
-            "description": "Sleep Piece Input Model",
             "properties": {
-                "sleep_time": {
-                    "default": 1,
-                    "description": "Number of seconds to sleep",
-                    "title": "Sleep Time",
-                    "type": "number"
+                "host": {
+                    "description": "Server",
+                    "title": "Host",
+                    "type": "string"
+                },
+                "port": {
+                    "description": "Port",
+                    "title": "Port",
+                    "type": "integer"
+                },
+                "user": {
+                    "description": "User",
+                    "title": "User",
+                    "type": "string"
+                },
+                "password": {
+                    "description": "Password",
+                    "title": "Password",
+                    "type": "string"
+                },
+                "route": {
+                    "description": "Route",
+                    "title": "Route",
+                    "type": "string"
+                },
+                "file": {
+                    "description": "File",
+                    "title": "File",
+                    "type": "string"
+                },
+                "idoc_content": {
+                    "description": "File content in IDOC",
+                    "title": "Idoc Content",
+                    "type": "string"
                 }
             },
+            "required": [
+                "host",
+                "port",
+                "user",
+                "password",
+                "route",
+                "file",
+                "idoc_content"
+            ],
             "title": "InputModel",
             "type": "object"
         },
         "output_schema": {
-            "description": "Sleep Piece Output Model",
             "properties": {
                 "message": {
-                    "description": "Sleep piece executed",
+                    "description": "Message",
                     "title": "Message",
                     "type": "string"
                 }
@@ -60,82 +97,7 @@
             "type": "object"
         },
         "secrets_schema": null,
-        "source_url": "https://github.com/SergiCarmonaEnzyme/enzyme_domino_pieces/tree/main/pieces/ExampleSleepPiece"
-    },
-    "ExampleSineWavePiece": {
-        "name": "ExampleSineWavePiece",
-        "dependency": {
-            "dockerfile": "Dockerfile",
-            "requirements_file": null
-        },
-        "tags": [
-            "Example"
-        ],
-        "style": {
-            "node_label": "Example Sine Piece",
-            "node_type": "default",
-            "node_style": {
-                "backgroundColor": "#ebebeb"
-            },
-            "useIcon": true,
-            "icon_class_name": "fa-solid:database",
-            "iconStyle": {
-                "cursor": "pointer"
-            }
-        },
-        "description": "This is an example of a piece that uses Dockerfile for dependencies.",
-        "container_resources": {
-            "requests": {
-                "cpu": 100,
-                "memory": 128
-            },
-            "limits": {
-                "cpu": 500,
-                "memory": 512
-            }
-        },
-        "input_schema": {
-            "description": "Sleep Piece Input Model",
-            "properties": {
-                "frequency": {
-                    "default": 5,
-                    "description": "Frequency of the sine wave in Hz",
-                    "title": "Frequency",
-                    "type": "integer"
-                },
-                "duration": {
-                    "default": 1,
-                    "description": "Duration of the sine wave signal in seconds",
-                    "title": "Duration",
-                    "type": "integer"
-                },
-                "sample_rate": {
-                    "default": 1000,
-                    "description": "Sample rate of the sine wave signal.",
-                    "title": "Sample Rate",
-                    "type": "integer"
-                }
-            },
-            "title": "InputModel",
-            "type": "object"
-        },
-        "output_schema": {
-            "description": "Sleep Piece Output Model",
-            "properties": {
-                "message": {
-                    "description": "Sleep piece executed",
-                    "title": "Message",
-                    "type": "string"
-                }
-            },
-            "required": [
-                "message"
-            ],
-            "title": "OutputModel",
-            "type": "object"
-        },
-        "secrets_schema": null,
-        "source_url": "https://github.com/SergiCarmonaEnzyme/enzyme_domino_pieces/tree/main/pieces/ExampleSineWavePiece"
+        "source_url": "https://github.com/SergiCarmonaEnzyme/enzyme_domino_pieces/tree/main/pieces/UploadFileIDOCToSFTPPiece"
     },
     "ReadFileSFTPPiece": {
         "name": "ReadFileSFTPPiece",
@@ -144,7 +106,8 @@
             "requirements_file": "requirements.txt"
         },
         "tags": [
-            "Example"
+            "SFTP",
+            "CSV"
         ],
         "style": {
             "node_label": "Read File From SFTP",
@@ -158,7 +121,7 @@
                 "cursor": "pointer"
             }
         },
-        "description": "This is an example of a piece that uses Dockerfile for dependencies.",
+        "description": "Read file content in sftp.",
         "container_resources": {
             "requests": {
                 "cpu": 100,
@@ -214,21 +177,84 @@
             "type": "object"
         },
         "output_schema": {
-            "description": "Sleep Piece Output Model",
             "properties": {
-                "message": {
+                "file_content": {
                     "description": "Content File",
-                    "title": "Message",
+                    "title": "File Content",
                     "type": "string"
                 }
             },
             "required": [
-                "message"
+                "file_content"
             ],
             "title": "OutputModel",
             "type": "object"
         },
         "secrets_schema": null,
         "source_url": "https://github.com/SergiCarmonaEnzyme/enzyme_domino_pieces/tree/main/pieces/ReadFileSFTPPiece"
+    },
+    "ConvertCSVToIDOCPiece": {
+        "name": "ConvertCSVToIDOCPiece",
+        "dependency": {
+            "dockerfile": null,
+            "requirements_file": "requirements.txt"
+        },
+        "tags": [
+            "IDOC",
+            "CSV"
+        ],
+        "style": {
+            "node_label": "Convert CSV To IDOC",
+            "node_type": "default",
+            "node_style": {
+                "backgroundColor": "#ebebeb"
+            },
+            "useIcon": true,
+            "icon_class_name": "fa-solid:database",
+            "iconStyle": {
+                "cursor": "pointer"
+            }
+        },
+        "description": "Convert content of csv file to IDOC.",
+        "container_resources": {
+            "requests": {
+                "cpu": 100,
+                "memory": 128
+            },
+            "limits": {
+                "cpu": 500,
+                "memory": 512
+            }
+        },
+        "input_schema": {
+            "properties": {
+                "file_content": {
+                    "description": "Content File",
+                    "title": "File Content",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "file_content"
+            ],
+            "title": "InputModel",
+            "type": "object"
+        },
+        "output_schema": {
+            "properties": {
+                "idoc_content": {
+                    "description": "File content in IDOC",
+                    "title": "Idoc Content",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "idoc_content"
+            ],
+            "title": "OutputModel",
+            "type": "object"
+        },
+        "secrets_schema": null,
+        "source_url": "https://github.com/SergiCarmonaEnzyme/enzyme_domino_pieces/tree/main/pieces/ConvertCSVToIDOCPiece"
     }
 }

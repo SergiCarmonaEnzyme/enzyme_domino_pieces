@@ -5,21 +5,11 @@
             "requirements_file": "requirements.txt"
         },
         "pieces": [
-            "ExampleSleepPiece",
-            "ReadFileSFTPPiece"
+            "UploadFileIDOCToSFTPPiece",
+            "ReadFileSFTPPiece",
+            "ConvertCSVToIDOCPiece"
         ],
         "secrets": [],
-        "source_image": "ghcr.io/sergicarmonaenzyme/enzyme_domino_pieces-ghcr:1.0-group0"
-    },
-    "group1": {
-        "dependency": {
-            "dockerfile": "Dockerfile",
-            "requirements_file": null
-        },
-        "pieces": [
-            "ExampleSineWavePiece"
-        ],
-        "secrets": [],
-        "source_image": "ghcr.io/sergicarmonaenzyme/enzyme_domino_pieces-ghcr:1.0-group1"
+        "source_image": "ghcr.io/sergicarmonaenzyme/enzyme_domino_pieces-ghcr:1.1.1-group0"
     }
 }
