@@ -24,3 +24,9 @@ class InputModel(BaseModel):
     idoc_content: str = Field(
         description="File content in IDOC"
     )
+
+
+class OutputModel(BaseModel):
+    message: str = Field(
+        description="Message"
+    )
