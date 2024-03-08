@@ -6,7 +6,7 @@ class InputModel(BaseModel):
     host: str = Field(
         description="Server"
     )
-    port: str = Field(
+    port: int = Field(
         description="Port"
     )
     user: str = Field(
