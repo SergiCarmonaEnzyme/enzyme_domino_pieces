@@ -7,10 +7,9 @@ on:
     paths:
       - "config.toml"
 
-permissions:
-  packages: read|write|none
-
 jobs:
+  permissions:
+    packages: write
   validate-and-organize:
     runs-on: ubuntu-latest
     steps:
