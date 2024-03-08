@@ -9,6 +9,7 @@ on:
 
 permissions:
   packages: write
+  actions: write
 
 jobs:
   validate-and-organize:
